@@ -12,11 +12,9 @@ namespace RPSLS
         {
             Player playerOne = new Player("Player One");
             Player playerTwo = new Player("Player Two");
-            Console.WriteLine(playerOne.score);
             playerOne.PickGesture();
+            
             playerTwo.PickGesture();
-            Console.WriteLine(playerOne.choice);
-            Console.WriteLine(playerTwo.choice);
         }
     }
 }

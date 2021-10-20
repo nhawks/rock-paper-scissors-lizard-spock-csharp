@@ -13,6 +13,7 @@ namespace RPSLS
         public string choice;
         public int score;
         public List<string> gestures = new List<string> { "rock", "paper", "scissors", "lizard", "spock" };
+        public bool gestureIsValid;
 
         // Constructor (Generates)
         public Player(string playerName)
@@ -21,7 +22,6 @@ namespace RPSLS
         }
 
         // Methods (Can do)
-        // - pick gesture (players can override)
         public virtual void PickGesture()
         {
             Console.WriteLine($"Current Choice: {choice}");
@@ -29,5 +29,16 @@ namespace RPSLS
             choice = Console.ReadLine();
         }
         // - validate choice
+        public void GestureIsValid()
+        {
+            if (gestures.Contains(choice))
+            {
+                gestureIsValid = true;
+            }
+            else
+            {
+                gestureIsValid = false;
+            }
+        }
     }
 }
