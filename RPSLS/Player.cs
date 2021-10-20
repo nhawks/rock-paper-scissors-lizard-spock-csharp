@@ -18,15 +18,16 @@ namespace RPSLS
         public Player(string playerName)
         {
             name = playerName;
-           
         }
 
         // Methods (Can do)
-
-        public void pickGesture(string gesture)
+        // - pick gesture (players can override)
+        public virtual void PickGesture()
         {
-            Console.WriteLine(gestures.Contains(gesture));
+            Console.WriteLine($"Current Choice: {choice}");
+            Console.WriteLine("Pick a gesture: Rock | Paper | Scissors | Lizard | Spock");
+            choice = Console.ReadLine();
         }
-
+        // - validate choice
     }
 }
