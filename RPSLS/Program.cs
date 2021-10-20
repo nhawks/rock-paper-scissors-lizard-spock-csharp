@@ -10,8 +10,8 @@ namespace RPSLS
     {
         static void Main(string[] args)
         {
-            Player playerOne = new Player("Player One");
-            Player playerTwo = new Player("Player Two");
+            Human playerOne = new Human("Player One");
+            Human playerTwo = new Human("Player Two");
             playerOne.PickGesture();
             playerTwo.PickGesture();
         }
