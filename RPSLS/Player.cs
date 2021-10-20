@@ -24,11 +24,16 @@ namespace RPSLS
         // Methods (Can do)
         public virtual void PickGesture()
         {
-            Console.WriteLine($"Current Choice: {choice}");
-            Console.WriteLine("Pick a gesture: Rock | Paper | Scissors | Lizard | Spock");
-            choice = Console.ReadLine();
+            do
+            {
+                Console.WriteLine("___________________________________________________________________");
+                Console.WriteLine($"{name} pick a gesture: Rock | Paper | Scissors | Lizard | Spock");
+                choice = Console.ReadLine().ToLower();
+                GestureIsValid();
+
+            }
+            while (!gestureIsValid);
         }
-        // - validate choice
         public void GestureIsValid()
         {
             if (gestures.Contains(choice))
@@ -38,6 +43,7 @@ namespace RPSLS
             else
             {
                 gestureIsValid = false;
+                Console.WriteLine($"{name} Choice Invalid: That choice({choice}) was invalid!\nPlease check your spelling or choose a value from the list.");
             }
         }
     }

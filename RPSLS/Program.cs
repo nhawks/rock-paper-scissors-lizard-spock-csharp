@@ -13,7 +13,6 @@ namespace RPSLS
             Player playerOne = new Player("Player One");
             Player playerTwo = new Player("Player Two");
             playerOne.PickGesture();
-            
             playerTwo.PickGesture();
         }
     }
