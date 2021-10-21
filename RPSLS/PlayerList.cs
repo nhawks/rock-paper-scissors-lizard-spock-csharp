@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RPSLS
+﻿namespace RPSLS
 {
-    class PlayerList
+    public class PlayerList
     {
-        public Player [] playerList = new Player[2];
+        public Player[] playerList = new Player[2];
 
         public void CreatePlayers(int mode)
         {
@@ -19,7 +13,6 @@ namespace RPSLS
                 playerList[0] = playerOne;
                 playerList[1] = playerAI;
             }
-
             else if (mode == 2)
             {
                 Human playerOne = new Human("Player One");

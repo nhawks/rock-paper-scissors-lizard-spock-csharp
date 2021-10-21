@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RPSLS
 {
@@ -10,6 +7,7 @@ namespace RPSLS
     {
         // Member Variables (Has)
         public string name;
+
         public string choice;
         public int score;
         public List<string> gestures = new List<string> { "rock", "paper", "scissors", "lizard", "spock" };
@@ -30,10 +28,10 @@ namespace RPSLS
                 Console.WriteLine($"{name} pick a gesture: Rock | Paper | Scissors | Lizard | Spock");
                 choice = Console.ReadLine().ToLower();
                 GestureIsValid();
-
             }
             while (!gestureIsValid);
         }
+
         public void GestureIsValid()
         {
             if (gestures.Contains(choice))

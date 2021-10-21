@@ -1,41 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RPSLS
+﻿namespace RPSLS
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            //Human playerOne = new Human("Player One");
-            //Human playerTwo = new Human("Player Two");
-            //playerOne.PickGesture();
-            //playerTwo.PickGesture();
-
-            AI RPSLS = new AI("RPSLS AI");
-            RPSLS.PickGesture();
-            Console.WriteLine(RPSLS.choice);
-            Console.ReadLine();
-
-            RPSLS.PickGesture();
-            Console.WriteLine(RPSLS.choice);
-            Console.ReadLine();
-
-            RPSLS.PickGesture();
-            Console.WriteLine(RPSLS.choice);
-            Console.ReadLine();
-
-
-            RPSLS.PickGesture();
-            Console.WriteLine(RPSLS.choice);
-            Console.ReadLine();
-
-            RPSLS.PickGesture();
-            Console.WriteLine(RPSLS.choice);
-            Console.ReadLine();
+            Game startGame = new Game();
+            startGame.RunGame();
         }
     }
 }
